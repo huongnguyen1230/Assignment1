@@ -16,40 +16,44 @@
 
     <!-- Header -->
     <header class="w3-container" style="padding-top:22px">
-        <h5><b><i class="fa fa-plus-square"></i> Product Form</b></h5>
+        <h5><b style="color: purple"><i class="fa fa-plus-square" ></i> New Food Form</b></h5>
     </header>
 
     <div class="w3-padding w3-margin-bottom">
         <form action="/admin/product/create" method="post" class="w3-container w3-padding w3-card-4 w3-margin">
             <div class="w3-margin">
                 <label>Name</label>
-                <input class="w3-input" type="text" name="name">
+                <input class="w3-input" type="text" name="name" placeholder="Enter name">
+            </div>
+            <div class="w3-margin">
+                <label>ID Category</label>
+                <input class="w3-input" type="number" name="idCategory" placeholder="Enter ID category">
             </div>
             <div class="w3-margin">
                 <label>Price</label>
-                <input class="w3-input" type="number" name="price">
+                <input class="w3-input" type="number" name="price" placeholder="Enter price">
             </div>
             <div class="w3-margin">
                 <label>Description</label>
-                <input class="w3-input" type="text" name="description">
+                <input class="w3-input" type="text" name="description" placeholder="Enter description">
             </div>
             <div class="w3-margin">
                 <label>Thumbnail</label>
-                <input class="w3-input" type="url" name="thumbnail">
+                <input class="w3-input" type="url" name="thumbnail" placeholder="Enter thumbnail">
             </div>
             <div class="w3-margin">
                 <label>Start Date</label>
-                <input class="w3-input" type="url" name="startDate">
+                <input class="w3-input" type="date" name="startDate" placeholder="Enter start date">
             </div>
             <div class="w3-margin">
                 <label>Edit Date</label>
-                <input class="w3-input" type="url" name="editDate">
+                <input class="w3-input" type="date" name="editDate" placeholder="Enter edit date">
             </div>
             <div class="w3-margin">
                 <label>Status</label>
-                <input class="w3-input" type="number" name="status">
+                <input class="w3-input" type="number" name="status" placeholder="Enter status">
             </div>
-            <button class="w3-btn w3-blue w3-margin">Submit</button>
+            <button class="w3-btn w3-purple w3-margin">Submit</button>
         </form>
     </div>
     <hr>

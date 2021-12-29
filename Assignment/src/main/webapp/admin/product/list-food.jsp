@@ -1,7 +1,7 @@
 <%@ page import="com.example.assignment.entity.Food" %>
 <%@ page import="java.util.ArrayList" %><%
   request.setCharacterEncoding("utf-8");
-  ArrayList<Food> list = (ArrayList<Food>)request.getAttribute("list-food");
+  ArrayList<Food> list = (ArrayList<Food>)request.getAttribute("list");
 %>
 <!DOCTYPE html>
 <html>
@@ -22,31 +22,40 @@
   <!-- Header -->
   <header id="portfolio">
     <div class="w3-container" style="padding-top:22px;">
-      <h4><b>Main Menu</b></h4>
+      <h2><b style="color: purple">Main Menu</b></h2>
     </div>
   </header>
   <div class="w3-container" style="padding-top:30px; ">
     <table class="w3-table-all">
       <tr>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th class="w3-center">Points</th>
+        <th>ID</th>
+        <th>Thumbnail</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Start Date</th>
+        <th>Edit Date</th>
+        <th>Status</th>
+        <th>Action</th>
       </tr>
+      <%
+        for (int i = 0; i < list.size(); i++){
+      %>
       <tr>
-        <td>Jill</td>
-        <td>Smith</td>
-        <td class="w3-center">50</td>
+        <th><%=list.get(i).getId()%></th>
+        <th>
+          <img src="<%=list.get(i).getThumbnail()%>" style="width: 100px" class="w3-border w3-padding" alt="Alps">
+        </th>
+        <th><%=list.get(i).getName()%></th>
+        <th><%=list.get(i).getPrice()%></th>
+        <th><%=list.get(i).getStatus()%></th>
+        <th>
+          <a href="/admin/product/edit?id=<%=list.get(i).getId()%>">Edit</a>&nbsp;
+          <a href="/admin/product/delete?id=<%=list.get(i).getId()%>">Delete</a>
+        </th>
       </tr>
-      <tr>
-        <td>Eve</td>
-        <td>Jackson</td>
-        <td class="w3-center">94</td>
-      </tr>
-      <tr>
-        <td>Adam</td>
-        <td>Johnson</td>
-        <td class="w3-center">67</td>
-      </tr>
+      <%
+        }
+      %>
     </table>
   </div>
   <!-- Footer -->

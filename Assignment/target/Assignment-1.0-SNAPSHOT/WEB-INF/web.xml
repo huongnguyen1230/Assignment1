@@ -11,7 +11,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>ListProductServlet</servlet-name>
-        <url-pattern>/admin/food/list</url-pattern>
+        <url-pattern>/admin/product/list</url-pattern>
     </servlet-mapping>
     <!--TẠO MỚI SẢN PHẨM-->
     <servlet>
@@ -20,7 +20,7 @@
     </servlet>
     <servlet-mapping><!-- mapping package voi url -->
         <servlet-name>CreatProductServlet</servlet-name>
-        <url-pattern>/admin/food/create</url-pattern> <!-- url cho den link co ten la Create Product Servlet-->
+        <url-pattern>/admin/product/create</url-pattern> <!-- url cho den link co ten la Create Product Servlet-->
     </servlet-mapping>
 
     <!-- EDIT SẢN PHẨM-->
@@ -30,7 +30,7 @@
     </servlet>
     <servlet-mapping><!-- mapping package voi url -->
         <servlet-name>EditProductServlet</servlet-name>
-        <url-pattern>/admin/food/edit</url-pattern> <!-- url cho den link co ten la Create Product Servlet-->
+        <url-pattern>/admin/product/edit</url-pattern> <!-- url cho den link co ten la Create Product Servlet-->
     </servlet-mapping>
 
     <jsp-config>

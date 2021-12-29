@@ -1,25 +1,24 @@
 package com.example.assignment.controller;
 
 import com.example.assignment.entity.Food;
+import com.example.assignment.repository.JpaRepository;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ListProductServlet extends HttpServlet {
+
+    JpaRepository<Food> jpaFood = new JpaRepository<>(Food.class);
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Food food = new Food();
-        food.setId(1);
-        food.setName("Bánh mỳ");
-        food.setId(1);
-        food.setId(1);
-        food.setId(1);
-        food.setId(1);
-        food.setId(1);
-        food.setId(1);
-        req.getRequestDispatcher("/admin/product/list-food.jsp").forward(req, resp);
+        List<Food> list = jpaFood.findAll();
+
+        req.setAttribute("list", list);
+        req.getRequestDispatcher("/admin/product/list-food.jsp").forward(req,resp);
     }
 }
