@@ -23,6 +23,16 @@
         <url-pattern>/admin/product/create</url-pattern> <!-- url cho den link co ten la Create Product Servlet-->
     </servlet-mapping>
 
+<!--    DETAIL SẢN PHẨM-->
+    <servlet>
+        <servlet-name>DetailProductServlet</servlet-name>
+        <servlet-class>com.example.assignment.controller.DetailProductServlet</servlet-class> <!-- khai bao package-->
+    </servlet>
+    <servlet-mapping><!-- mapping package voi url -->
+        <servlet-name>DetailProductServlet</servlet-name>
+        <url-pattern>/admin/product/detail</url-pattern> <!-- url cho den link co ten la Create Product Servlet-->
+    </servlet-mapping>
+
     <!-- EDIT SẢN PHẨM-->
     <servlet>
         <servlet-name>EditProductServlet</servlet-name>

@@ -51,6 +51,7 @@
         <th><%=list.get(i).getEditDate()%></th>
         <th><%=list.get(i).getStatus()%></th>
         <th>
+          <a href="/admin/product/detail?id=<%=list.get(i).getId()%>">Detail</a>&nbsp;
           <a href="/admin/product/edit?id=<%=list.get(i).getId()%>">Edit</a>&nbsp;
           <a class="btn-delete" onclick="deleteFood(<%= list.get(i).getId()%>)" href="#">Delete</a>
         </th>
