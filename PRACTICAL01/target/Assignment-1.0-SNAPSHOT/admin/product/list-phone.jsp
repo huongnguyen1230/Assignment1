@@ -1,6 +1,6 @@
-<%@ page import="com.example.assignment.entity.Food" %>
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="com.example.assignment.entity.Phone" %><%
+<%@ page import="com.example.assignment.entity.Phone" %>
+<%
   request.setCharacterEncoding("utf-8");
   ArrayList<Phone> list = (ArrayList<Phone>)request.getAttribute("list");
 %>
@@ -34,7 +34,6 @@
         <th>Brand</th>
         <th>Description</th>
         <th>Price</th>
-        <th>Action</th>
       </tr>
       <%
         for (int i = 0; i < list.size(); i++){
@@ -43,13 +42,8 @@
         <th><%=list.get(i).getId()%></th>
         <th><%=list.get(i).getName()%></th>
         <th><%=list.get(i).getPrice()%></th>
-        <th><%=list.get(i).getStartDate()%></th>
-        <th><%=list.get(i).getEditDate()%></th>
-        <th><%=list.get(i).getStatus()%></th>
-        <th>
-          <a href="/admin/product/edit?id=<%=list.get(i).getId()%>">Edit</a>&nbsp;
-          <a class="btn-delete" onclick="deleteFood(<%= list.get(i).getId()%>)" href="#">Delete</a>
-        </th>
+        <th><%=list.get(i).getBrand()%></th>
+        <th><%=list.get(i).getDescription()%></th>
       </tr>
       <%
         }
