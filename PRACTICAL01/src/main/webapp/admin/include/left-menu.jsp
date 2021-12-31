@@ -8,7 +8,8 @@
         </div>
     </div>
     <div class="w3-bar-block">
-        <a href="/admin/product/list" onclick="w3_close()" class="w3-bar-item w3-button w3-padding" style="color: purple" ><i class="fa fa-list w3-margin-right"></i>LIST PHONE</a>
+        <a href="/admin/product/list" onclick="w3_close()" class="w3-bar-item w3-button w3-padding" style="color: purple" ><i class="fa fa-list w3-margin-right"></i>MENU</a>
+        <a href="/admin/product/create" onclick="w3_close()" class="w3-bar-item w3-button w3-padding" style="color: purple"><i class="fa fa-plus w3-margin-right"></i>CREATE NEW PHONE</a>
     </div>
 </nav>
 
