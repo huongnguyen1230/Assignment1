@@ -1,3 +1,7 @@
+<%@ page import="com.example.assignment.entity.Food" %><%
+    request.setCharacterEncoding("utf-8");
+    Food food = (Food) request.getAttribute("food");
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,32 +20,38 @@
 
     <!-- Header -->
     <header class="w3-container" style="padding-top:22px">
-        <h5><b><i class="fa fa-plus-square"></i> Product Form</b></h5>
+        <h5><b style="color: purple"><i class="fa fa-plus-square" ></i>&nbsp; Edit Food</b></h5>
     </header>
 
     <div class="w3-padding w3-margin-bottom">
-        <form action="/admin/product/create" method="post" class="w3-container w3-padding w3-card-4 w3-margin">
+        <form action="/admin/product/edit" method="post" class="w3-container w3-padding w3-card-4 w3-margin">
+            <input class="w3-input" type="hidden" name="id" value="<%=food.getId()%>">
+
             <div class="w3-margin">
                 <label>Name</label>
-                <input class="w3-input" type="text" name="name">
+                <input class="w3-input" type="text" name="name" value="<%=food.getName()%>">
+            </div>
+            <div class="w3-margin">
+                <label>ID Category</label>
+                <input class="w3-input" type="number" name="idCategory" value="<%=food.getIdCategory()%>">
             </div>
             <div class="w3-margin">
                 <label>Price</label>
-                <input class="w3-input" type="number" name="price">
+                <input class="w3-input" type="number" name="price" value="<%=food.getPrice()%>">
             </div>
             <div class="w3-margin">
                 <label>Description</label>
-                <input class="w3-input" type="text" name="description">
+                <input class="w3-input" type="text" name="description" value="<%=food.getDescription()%>">
             </div>
             <div class="w3-margin">
                 <label>Thumbnail</label>
-                <input class="w3-input" type="url" name="thumbnail">
+                <input class="w3-input" type="url" name="thumbnail" value="<%=food.getThumbnail()%>">
             </div>
             <div class="w3-margin">
                 <label>Status</label>
-                <input class="w3-input" type="number" name="status">
+                <input class="w3-input" type="number" name="status" value="<%=food.getStatus()%>">
             </div>
-            <button class="w3-btn w3-blue w3-margin">Submit</button>
+            <button class="w3-btn w3-purple w3-margin">Submit</button>
         </form>
     </div>
     <hr>

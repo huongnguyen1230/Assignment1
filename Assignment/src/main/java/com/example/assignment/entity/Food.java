@@ -44,6 +44,14 @@ public class Food {
     }
 
     public Food(String name, int idCategory, String description, String thumbnail, Double price, Date startDate, Date editDate, int status) {
+        this.name = name;
+        this.idCategory = idCategory;
+        this.description = description;
+        this.thumbnail = thumbnail;
+        this.price = price;
+        this.startDate = startDate;
+        this.editDate = editDate;
+        this.status = status;
     }
 
 

@@ -41,14 +41,14 @@
                 <label>Thumbnail</label>
                 <input class="w3-input" type="url" name="thumbnail" placeholder="Enter thumbnail">
             </div>
-            <div class="w3-margin">
-                <label>Start Date</label>
-                <input class="w3-input" type="date" name="startDate" placeholder="Enter start date">
-            </div>
-            <div class="w3-margin">
-                <label>Edit Date</label>
-                <input class="w3-input" type="date" name="editDate" placeholder="Enter edit date">
-            </div>
+<%--            <div class="w3-margin">--%>
+<%--                <label>Start Date</label>--%>
+<%--                <input class="w3-input" type="date" name="startDate" placeholder="Enter start date">--%>
+<%--            </div>--%>
+<%--            <div class="w3-margin">--%>
+<%--                <label>Edit Date</label>--%>
+<%--                <input class="w3-input" type="date" name="editDate" placeholder="Enter edit date">--%>
+<%--            </div>--%>
             <div class="w3-margin">
                 <label>Status</label>
                 <input class="w3-input" type="number" name="status" placeholder="Enter status">

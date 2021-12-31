@@ -23,31 +23,22 @@ public class CreateProductServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
                 req.setCharacterEncoding("UTF-8");
-                String name = req.getParameter("name");
+                String name = String.valueOf(req.getParameter("name"));
                 int idCategory = Integer.parseInt(req.getParameter("idCategory"));
-                String description = req.getParameter("description");
-                String thumbnail = req.getParameter("thumbnail");
-                Double price = Double.parseDouble(req.getParameter("price"));
-//                SimpleDateFormat simpleDateFormat = new SimpleDateFormat();
-//                Date startDate = simpleDateFormat.parse(req.getParameter("startDate"));
-//                Date editDate = simpleDateFormat.parse(req.getParameter("editDate"));
-                SimpleDateFormat formater =  new SimpleDateFormat("yyyy-MM-dd");
-                Date startDate = formater.parse(req.getParameter("startDate"));
-                Date editDate = formater.parse(req.getParameter("editDate"));
+                String description =String.valueOf(req.getParameter("description") );
+                String thumbnail = String.valueOf(req.getParameter("thumbnail"));
+                double price = Double.parseDouble(req.getParameter("price"));
+                Date startDate = new Date();
+                Date editDate = new Date();
                 System.out.println(startDate);
                 System.out.println(editDate);
                 int status = Integer.parseInt(req.getParameter("status"));
                 //tạo đối tượng lớp Food
                 Food food = new Food(name, idCategory, description, thumbnail, price, startDate, editDate, status);
-                //kiểm tra tính hợp lệ của Food
-                if (food.isValid()){
                     jpaFood.save(food);
                     resp.sendRedirect("/admin/product/list");
-                }else {
-                    req.getRequestDispatcher("/admin/product/create-food.jsp").forward(req, resp);
-                }
             } catch (Exception ex) {
-            ex.printStackTrace();
+            System.out.println(ex.getMessage());
             resp.getWriter().println(ex.getMessage());
         }
     }

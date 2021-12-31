@@ -43,14 +43,16 @@
       <tr>
         <th><%=list.get(i).getId()%></th>
         <th>
-          <img src="<%=list.get(i).getThumbnail()%>" style="width: 100px" class="w3-border w3-padding" alt="Alps">
+          <img src="<%=list.get(i).getThumbnail()%>" style="width: 100px; height: 70px" class="w3-border w3-padding" alt="Alps">
         </th>
         <th><%=list.get(i).getName()%></th>
         <th><%=list.get(i).getPrice()%></th>
+        <th><%=list.get(i).getStartDate()%></th>
+        <th><%=list.get(i).getEditDate()%></th>
         <th><%=list.get(i).getStatus()%></th>
         <th>
           <a href="/admin/product/edit?id=<%=list.get(i).getId()%>">Edit</a>&nbsp;
-          <a href="/admin/product/delete?id=<%=list.get(i).getId()%>">Delete</a>
+          <a class="btn-delete" onclick="deleteFood(<%= list.get(i).getId()%>)" href="#">Delete</a>
         </th>
       </tr>
       <%
@@ -61,9 +63,22 @@
   <!-- Footer -->
   <jsp:include page="/admin/include/footer.jsp"/>
 
-
-  <!-- End page content -->
 </div>
 <jsp:include page="/admin/include/script.jsp"/>
+<script>
+  function deleteFood(id){
+    if (confirm('Bạn muốn xóa sản phẩm này?')){
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function (){
+        if (xhr.readyState == 4 && xhr.status == 200){
+          alert('Xóa sản phẩm thành công');
+          window.location.reload();
+        }
+      };
+      xhr.open('DELETE', '/admin/product/delete?id=' + id);
+      xhr.send();
+    }
+  }
+</script>
 </body>
 </html>

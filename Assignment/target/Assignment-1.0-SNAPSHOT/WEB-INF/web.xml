@@ -33,6 +33,15 @@
         <url-pattern>/admin/product/edit</url-pattern> <!-- url cho den link co ten la Create Product Servlet-->
     </servlet-mapping>
 
+<!--    DELETE SẢN PHẨM-->
+    <servlet>
+        <servlet-name>DeleteProductServlet</servlet-name>
+        <servlet-class>com.example.assignment.controller.EditProductServlet</servlet-class> <!-- khai bao package-->
+    </servlet>
+    <servlet-mapping><!-- mapping package voi url -->
+        <servlet-name>DeleteProductServlet</servlet-name>
+        <url-pattern>/admin/product/delete</url-pattern> <!-- url cho den link co ten la Create Product Servlet-->
+    </servlet-mapping>
     <jsp-config>
         <jsp-property-group>
             <url-pattern>*.jsp</url-pattern>
