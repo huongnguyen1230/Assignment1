@@ -8,7 +8,7 @@
 <html>
 <head>
   <jsp:include page="/admin/include/header.jsp">
-    <jsp:param name="title" value="Purple House"/>
+    <jsp:param name="title" value="Phone"/>
   </jsp:include>
 </head>
 <body class="w3-light-grey">
@@ -23,7 +23,7 @@
   <!-- Header -->
   <header id="portfolio">
     <div class="w3-container" style="padding-top:22px;">
-      <h2><b style="color: purple">Main Menu</b></h2>
+      <h2><b style="color: purple">Main List Phone</b></h2>
     </div>
   </header>
   <div class="w3-container" style="padding-top:30px; ">
