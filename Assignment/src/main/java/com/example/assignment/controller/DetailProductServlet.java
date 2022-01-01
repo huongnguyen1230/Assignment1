@@ -21,11 +21,11 @@ public class DetailProductServlet extends HttpServlet {
                 resp.getWriter().println("Không tìm thấy sản phẩm");
             }else {
                 req.setAttribute("food", food);
-                req.getRequestDispatcher("/admin/profuct/detail");
+                req.getRequestDispatcher("/admin/product/detail-food.jsp").forward(req,resp);
             }
         }catch (Exception ex){
+            ex.printStackTrace();
             resp.getWriter().println("Bad request");
         }
-        super.doGet(req, resp);
     }
 }

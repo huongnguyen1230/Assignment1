@@ -21,8 +21,15 @@
 
   <!-- Header -->
   <header id="portfolio">
-    <div class="w3-container" style="padding-top:22px;">
+    <div class="w3-container w3-center" style="padding-top:22px;">
       <h2><b style="color: purple">Main Menu</b></h2>
+
+      </div>
+    <div class="w3-bar w3-black">
+      <a href="#"><div class="w3-bar-item w3-button w3-hover-purple" style="width:25%">Món nướng</div></a>
+      <a href="#"><div class="w3-bar-item w3-button w3-hover-purple" style="width:25%">Món luộc</div></a>
+      <a href="#"><div class="w3-bar-item w3-button w3-hover-purple" style="width:25%">Món chay</div></a>
+      <a href="#"><div class="w3-bar-item w3-button w3-hover-purple" style="width:25%">Đồ uống</div></a>
     </div>
   </header>
   <div class="w3-container" style="padding-top:30px; ">
@@ -51,9 +58,9 @@
         <th><%=list.get(i).getEditDate()%></th>
         <th><%=list.get(i).getStatus()%></th>
         <th>
-          <a href="/admin/product/detail?id=<%=list.get(i).getId()%>">Detail</a>&nbsp;
-          <a href="/admin/product/edit?id=<%=list.get(i).getId()%>">Edit</a>&nbsp;
-          <a class="btn-delete" onclick="deleteFood(<%= list.get(i).getId()%>)" href="#">Delete</a>
+          <a href="/admin/product/detail?id=<%=list.get(i).getId()%>" class="w3-hover-purple">Detail</a>&nbsp;
+          <a href="/admin/product/edit?id=<%=list.get(i).getId()%>" class="w3-hover-purple">Edit</a>&nbsp;
+          <a class="btn-delete w3-hover-purple" onclick="deleteFood(<%= list.get(i).getId()%>)" href="#">Delete</a>
         </th>
       </tr>
       <%

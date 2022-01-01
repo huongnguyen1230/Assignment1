@@ -1,3 +1,7 @@
+<%@ page import="com.example.assignment.entity.Food" %><%
+    request.setCharacterEncoding("utf-8");
+    Food food = (Food) request.getAttribute("food");
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,45 +20,44 @@
 
     <!-- Header -->
     <header class="w3-container" style="padding-top:22px">
-        <h5><b style="color: purple"><i class="fa fa-plus-square" ></i> New Food Form</b></h5>
+        <h5><b style="color: purple"><i class="fa fa-plus-square" ></i> Food Detail</b></h5>
     </header>
 
     <div class="w3-padding w3-margin-bottom">
+        <div class="w3-margin">
+            <img src="<%= food.getThumbnail()%>" alt="<%= food.getName()%>" width="200px" length="200px" >
+        </div>
             <div class="w3-margin">
                 <label>ID</label>
-                <p></p>
+                <p><%= food.getId()%></p>
             </div>
             <div class="w3-margin">
                 <label>Name</label>
-                <p></p>
+                <p><%= food.getName()%></p>
             </div>
             <div class="w3-margin">
                 <label>ID Category</label>
-                <p></p>
+                <p><%= food.getIdCategory()%></p>
             </div>
             <div class="w3-margin">
                 <label>Price</label>
-                <p></p>
+                <p><%= food.getPrice()%></p>
             </div>
             <div class="w3-margin">
                 <label>Description</label>
-                <p></p>
-            </div>
-            <div class="w3-margin">
-                <label>Thumbnail</label>
-                <p></p>
+                <p><%= food.getDescription()%></p>
             </div>
             <div class="w3-margin">
                 <label>Start Date</label>
-                <p></p>
+                <p><%= food.getStartDate()%></p>
             </div>
             <div class="w3-margin">
                 <label>Edit Date</label>
-                <p></p>
+                <p><%= food.getEditDate()%></p>
             </div>
             <div class="w3-margin">
                 <label>Status</label>
-                <p></p>
+                <p><%= food.getStatus()%></p>
             </div>
     </div>
     <hr>

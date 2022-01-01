@@ -53,6 +53,16 @@
                 <label>Status</label>
                 <input class="w3-input" type="number" name="status" placeholder="Enter status">
             </div>
+            <div class="w3-dropdown-hover">
+                <label class="w3-button">Category</label>
+                <div class="w3-dropdown-content w3-bar-block w3-border">
+                    <a href="#" class="w3-bar-item w3-button">Món nướng</a>
+                    <a href="#" class="w3-bar-item w3-button">Món luộc</a>
+                    <a href="#" class="w3-bar-item w3-button">Món chay</a>
+                    <a href="#" class="w3-bar-item w3-button">Đồ uống</a>
+                </div>
+            </div>
+            <hr>
             <button class="w3-btn w3-purple w3-margin">Submit</button>
         </form>
     </div>
